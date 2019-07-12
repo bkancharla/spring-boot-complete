@@ -1,6 +1,6 @@
 spring:
   application:
-    name: config-client
+    name: createusers
   cloud:
     discovery:
       enabled: true
