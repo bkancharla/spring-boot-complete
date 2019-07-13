@@ -24,6 +24,7 @@ public class UserController {
 
     @Value("${user.role}")
     private String serviceName;
+
     @Autowired
     public UserController(Environment environment, UserServiceImpl userServiceImple) {
         this.environment = environment;
@@ -49,5 +50,11 @@ public class UserController {
 
 
         return serviceName;
+    }
+
+
+    @GetMapping(path = "test")
+    public String createUsers() {
+        return "bhargav";
     }
 }

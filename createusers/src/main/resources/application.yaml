@@ -1,14 +1,7 @@
 spring:
   application:
     name: createusers
-  cloud:
-    discovery:
-      enabled: true
 
-    config:
-      uri: http://localhost:8888
-      username: root
-      password: s3cr3t
   h2:
     console:
       enabled: true
@@ -24,10 +17,9 @@ spring:
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.value}
----
-spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include=*:
